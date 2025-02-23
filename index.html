@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос по переписи населения</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            animation: slideUp 1s ease-in-out;
+            max-width: 800px;
+            width: 100%;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        label {
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+        }
+        input, select {
+            padding: 8px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .full-width {
+            grid-column: span 2;
+            display: flex;
+            justify-content: center;
+        }
+        button {
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <h1>Опрос по переписи населения</h1>
+    <form>
+        <label>ФИО: <input type="text" name="name" required></label>
+        <label>Возраст: <input type="number" name="age" required></label>
+        <label>Пол: <select name="gender" required>
+            <option value="male">Мужской</option>
+            <option value="female">Женский</option>
+            <option value="other">Другой</option>
+        </select></label>
+        <label>Город проживания: <input type="text" name="city" required></label>
+        <label>Семейное положение: <select name="marital_status" required>
+            <option value="single">Холост/Не замужем</option>
+            <option value="married">Женат/Замужем</option>
+            <option value="divorced">Разведен(а)</option>
+            <option value="widowed">Вдовец/Вдова</option>
+        </select></label>
+        <label>Уровень образования: <select name="education" required>
+            <option value="none">Без образования</option>
+            <option value="primary">Начальное</option>
+            <option value="secondary">Среднее</option>
+            <option value="higher">Высшее</option>
+        </select></label>
+        <label>Род занятий: <input type="text" name="occupation" required></label>
+        <label>Гражданство: <input type="text" name="citizenship" required></label>
+        <label>Языки, которыми владеете: <input type="text" name="languages" required></label>
+        <label>Число детей: <input type="number" name="children" required></label>
+        <label>Доход в месяц: <input type="number" name="income" required></label>
+        <label>Жильё (аренда/собственное): <input type="text" name="housing" required></label>
+        <label>Транспорт (авто, велосипед, общественный): <input type="text" name="transport" required></label>
+        <label>Есть ли у вас инвалидность? <select name="disability" required>
+            <option value="no">Нет</option>
+            <option value="yes">Да</option>
+        </select></label>
+        <label>Уровень физической активности: <input type="text" name="physical_activity" required></label>
+        <label>Частота путешествий: <input type="text" name="travel" required></label>
+        <label>Источник информации (ТВ, интернет, газеты): <input type="text" name="information_source" required></label>
+        <label>Частота волонтёрства: <input type="text" name="volunteering" required></label>
+        <label>Наличие домашних животных: <input type="text" name="pets" required></label>
+        <label>Удовлетворённость жизнью (1-10): <input type="number" name="life_satisfaction" required></label>
+        <div class="full-width">
+            <button type="submit">Отправить</button>
+        </div>
+    </form>
+</body>
+</html>
