@@ -32,7 +32,7 @@ var db *sql.DB
 
 func main() {
 	// Подключение к MS Access
-	dbPath := "C:\\Users\\HP\\Desktop\\fire.accdb"
+	dbPath := "dbPath := "C:\\Users\\Asus\\Desktop\\Moya papka\\fire.accdb"
 	connStr := fmt.Sprintf("Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=%s;", dbPath)
 
 	var err error
